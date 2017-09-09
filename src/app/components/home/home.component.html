@@ -1,0 +1,66 @@
+<div style="text-align:center; border:0px solid red;">
+    <img src="http://www.ayptoday.com/images/logo.gif" style="margin:auto;"/>
+</div>
+
+<div class="auction-list">
+        <app-auction-card  
+            *ngFor="let auc of auctions"
+            [auction]="auc" 
+            (click)="navigateToAuction(auc.auctionId)"    
+        >
+        </app-auction-card> 
+</div>
+
+
+<!--
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center" >
+                    <div>
+                        <button class="btn btn-default btn-lg m-r-2">
+                            Sign up for free 
+                        </button>
+
+                        <br><br>
+                        <label>Buttons</label>
+                        
+                        <br><button md-button>SUBMIT</button>md-button
+                        <br><button md-raised-button>SUBMIT</button> md-raised-button
+                        <br><button md-icon-button><i class="fa fa-user" aria-hidden="true"></i></button> md-icon-button
+                        <br><button md-fab><i class="fa fa-user" aria-hidden="true"></i></button> md-fab
+                        <br><button md-mini-fab><i class="fa fa-user" aria-hidden="true"></i></button> md-mini-fab
+
+                        <br><br>
+                        <label>Checkbox</label>
+                      
+                        <md-checkbox>Check me!</md-checkbox>
+                        
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+
+
+            
+            <hr>
+
+            <div class="panel panel-info" *ngFor="let auction of auctions">
+                <div class="panel-heading">Auction {{ auction.auctionId }} <span class="badge">{{ auction.status }}</span></div>
+                <div class="panel-body">
+                    <ul>
+                        <li>Auction Starts: {{ auction.startDt | date:'MM-dd-yy'  }}</li>
+                        <li>Auction Ends: {{ auction.endDt | date:'MM-dd-yy'  }}</li>
+                        <li>Auction Pickup: {{ auction.pickupDt | date:'MM-dd-yy'  }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->

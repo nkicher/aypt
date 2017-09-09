@@ -1,0 +1,30 @@
+
+md-toolbar {
+    -webkit-box-shadow: 0px 3px 5px #AAA;
+    -moz-box-shadow:    0px 3px 5px #AAA;
+    box-shadow:         0px 3px 5px #AAA;
+    z-index:999;
+}
+
+
+/********/
+.nav-button {
+    height:100% !important;
+}
+
+.mat-icon-button {
+    margin-top:8px;
+    margin-bottom:8px;
+    margin-right:8px;
+}
+
+.my-menu {
+    margin:8px 16px !important;
+    margin-right:0px !important;
+}
+
+/*
+.mat-icon-button {
+    margin:8px 16px !important;
+}
+*/

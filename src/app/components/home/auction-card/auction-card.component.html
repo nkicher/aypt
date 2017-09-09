@@ -1,0 +1,49 @@
+<!--
+<p>
+  <br>auction-card works!
+  <br>{{ auction.auctionId }}
+  <br>{{ auction.startDt }}
+  <br>{{ auction.endDt }}
+  <br>{{ auction.status }}
+  <br>{{ auction.pickupDt }}
+  <br>{{ auction.img }}
+</p>
+-->
+<md-card class="example-card mat-elevation-z24">
+    <md-card-header>
+       
+        <md-card-title>Auction: {{ auction.auctionId }}</md-card-title>
+        <span class="spacer"></span>
+        
+        <md-card-subtitle>
+          <md-chip-list>
+              <md-chip [color]="(auction.status === 'Open') ? 'warn' : 'primary'" selected="true">{{ auction.status }}</md-chip>
+          </md-chip-list> 
+        </md-card-subtitle>
+
+    </md-card-header>
+    <img 
+        md-card-image src="http://www.ayptoday.com/photos/{{ auction.img | hiRes }}"
+        alt="Photo of item">
+    <md-card-content>
+        <p color="primary">
+        All dates are in Estern Standard Time
+        <br>The Dates for this auction are:
+        <!-- <br>Start:  {{ auction.startDt | date:'MM-dd-yy' }} at 6:00 pm
+        <br>End:    {{ auction.endDt | date:'MM-dd-yy' }} at 7:00 pm
+        <br>Pickup: {{ auction.pickupDt | date:'MM-dd-yy' }} from 2 pm to 6 pm -->
+        </p>
+        <md-list>
+          <md-list-item> Start:  {{ auction.startDt | date:'M-d-yyyy' }} at 6:00 pm </md-list-item>
+          <md-list-item> End:    {{ auction.endDt | date:'M-d-yyyy' }} at 7:00 pm </md-list-item>
+          <md-list-item> Pickup: {{ auction.pickupDt | date:'M-d-yyyy' }} from 2 pm to 6 pm </md-list-item>
+        </md-list>
+    </md-card-content>
+    <md-card-actions>
+        <button md-button>LIKE</button>
+        <button md-button>SHARE</button>
+    </md-card-actions>
+    <md-card-footer>
+            test
+    </md-card-footer>
+</md-card>

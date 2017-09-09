@@ -1,0 +1,135 @@
+get gitbash
+get node.js
+
+open gitbash and run
+
+// install angular globally
+npm install -g @angular/cli
+
+//  create new angular app
+ng new my-first-app
+
+// Start server
+ng serve
+
+// install bootstrap css globally
+npm install --save bootstrap
+// then in .angular-cli.json add this
+// "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+// to the styles array
+
+// generate new component from bash
+ng generate component servers
+or
+ng g c servers
+or
+ng g c servers --spec false // to not generate the spec
+or
+ng generate component recipes/recipe-list // to place the new recipe-list inside of recipes/ folder
+
+// generate a new directive
+ng g d better-highlight
+
+// create a new branch from and existing one
+git checkout -b new_branch old_branch
+
+// create a new branch from current one
+git checkout -b new_branch
+
+NOTE: Switching branches carries uncommitted changes with you. 
+Either commit first, run git checkout . to undo them, or run 
+git stash before switching. (You can get your changes back with 
+git stash apply)
+
+// You can undo git add before commit with
+git reset <file>
+
+// delete a branch
+git branch -D <branch_name>
+
+// in VSCode to duplicate a line, just do
+shift + alt + down
+
+// to move a line
+alt up
+or 
+alt down
+
+.row>.col-xs-12
+
+is equivalent to
+
+<div class="row">
+  
+	<div class="col-xs-12">
+  
+		  
+  
+	</div>
+
+</div>
+
+Augury Chrome Extension for Debugging
+ 
+
+
+add and commit everything
+git commit -a -m 'general'
+
+
+git push --set-upstream origin section13-UnderstandingObservables
+
+ ~/angular/my-first-app.git
+
+==============
+
+Subject is the best way to emit an event
+you can then subscribe to it in components
+
+you always declare subjects in services
+
+to create a pipe
+ng g p filter
+
+git commit --author="nick <nick.kicher@gmail.com>" -m 'general'
+
+production build
+ng build --prod --aot
+
+
+install express
+npm install -g express
+or
+npm install express --save
+
+=========================================
+This is how to serve the express server
+=========================================
+node src/assets/express-server.js
+
+restarts the server each time you change a node file
+npm install nodemon --save-dev
+
+./node_modules/.bin/nodemon src/assets/server.js
+
+npm install mysql
+
+
+app.use(express.static(path.join(directory, 'public')));
+
+
+-- install MongoDB from
+www.mongodb.com
+
+setup path param to mongoDb bin dir
+
+-- install mongoose
+npm install --save mongoose
+
+-- also install
+npm install --save mongoose-unique-validator
+
+--restart node server
+npm start
+
+

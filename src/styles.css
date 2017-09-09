@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "custom-theme.css/custom-theme.css";
+
+.spacer {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+body { 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: rgba(0,0,0,0.87);
+    margin:0px;
+}	
+
+.no-padding {
+    padding: 0px !important;
+}
+
+
+a:hover {
+    text-decoration:none;
+}
+a {
+    text-decoration:none;
+    color:white;
+}
+/****************************/
+
+
+table {
+    border-collapse: collapse;
+    width:100%;
+    font-size:12px;
+}
+
+  td, th {
+      border: 1px solid #E0E0E0;
+      
+      
+      line-height:18px;
+  }
+
+  td {
+    padding: 15px 24px;
+    color: rgba(0,0,0,0.87);
+    /*white-space: pre-wrap;*/
+  }
+
+  th {
+    color: rgba(0,0,0,0.54);
+    font-weight: 500;
+    padding: 1px 24px;
+  }
+
+.no-wrap {
+    white-space: nowrap;
+}

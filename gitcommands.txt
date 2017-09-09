@@ -1,0 +1,56 @@
+get gitbash
+get node.js
+
+open gitbash and run
+
+// install angular globally
+npm install -g @angular/cli
+
+//  create new angular app
+ng new my-first-app
+
+// Start server
+ng serve
+
+// install bootstrap css globally
+npm install --save bootstrap
+// then in .angular-cli.json add this
+// "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+// to the styles array
+
+// generate new component from bash
+ng generate component servers
+or
+ng g c servers
+
+// create a new branch from and existing one
+git checkout -b new_branch old_branch
+
+NOTE: Switching branches carries uncommitted changes with you. 
+Either commit first, run git checkout . to undo them, or run 
+git stash before switching. (You can get your changes back with 
+git stash apply)
+
+// You can undo git add before commit with
+git reset <file>
+
+// delete a branch
+git branch -D <branch_name>
+
+
+npm install --save @angular/material @angular/cdk
+
+npm install --save @angular/animations
+
+ "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+npm install --save mdi // uninstall
+
+npm install material-design-icons
+
+npm install node-sass
+
+npm install --save sass-material-colors
+
+from ~angulsr/aypt, run
+node-sass --output-style compressed -o src/custom-theme.css src/custom-theme.scss

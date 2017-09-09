@@ -1,0 +1,50 @@
+For All Components
+
+    import { BrowserAnimationsModule } from '@angular/material';
+    imports: [
+        BrowserAnimationsModule
+    ]   
+
+
+Buttons
+
+    <br><button md-button>SUBMIT</button>md-button
+    <br><button md-raised-button>SUBMIT</button> md-raised-button
+    <br><button md-icon-button><i class="fa fa-user" aria-hidden="true"></i></button> md-icon-button
+    <br><button md-fab><i class="fa fa-user" aria-hidden="true"></i></button> md-fab
+    <br><button md-mini-fab><i class="fa fa-user" aria-hidden="true"></i></button> md-mini-fab
+
+    app.module.ts
+    import { MdCheckboxModule } from '@angular/material';
+    imports: [
+        MdCheckboxModule
+    ]   
+
+
+Checkbox
+
+    <md-checkbox>Check me!</md-checkbox>
+
+    app.module.ts
+    import { MdButtonModule } from '@angular/material';
+    imports: [
+        MdButtonModule
+    ]   
+
+
+Date Picker
+
+    <md-form-field>
+    <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
+    <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+    <md-datepicker #picker></md-datepicker>
+    </md-form-field>
+
+    app.module.ts
+    import { MdDatepickerModule, MdNativeDateModule, MdInputModule } from '@angular/material';
+    imports: [
+        MdDatepickerModule,
+        MdNativeDateModule,
+        MdInputModule
+    ]
+

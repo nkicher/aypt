@@ -1,0 +1,86 @@
+<div style="background-color:#232323; color:white; display:flex; height:56px" >
+  
+      <button md-icon-button class="my-menu">
+        <md-icon>menu</md-icon>
+      </button>
+      <button md-button class="nav-button" (click)="navigate('/')">
+          <img src="assets/logo-sm.png" style="height:20px;">ayp<b>Today</b>
+      </button>
+      
+      <span class="spacer"></span>
+      <button md-icon-button mdTooltip="Search For an Item" (click)="navigate('/sell-with-us')">
+        <md-icon>search</md-icon> 
+      </button>
+      <button md-icon-button mdTooltip="Arrange Layout" (click)="navigate('/about')">
+          <md-icon>view_module</md-icon>
+      </button>
+      <button md-icon-button mdTooltip="Account Info" (click)="navigate('/contact')">
+          <md-icon>person</md-icon>
+      </button>
+      <button md-icon-button mdTooltip="Go Fullscreen" (click)="navigate('/contact')">
+        <md-icon>settings_overscan</md-icon>
+        <!-- <i class="material-icons">settings_overscan</i> -->
+      </button>
+      <button 
+        md-icon-button 
+        mdTooltip="More Options"
+        [mdMenuTriggerFor]="menu"
+      >
+        <md-icon>more_vert</md-icon>
+      </button>
+      <md-menu #menu="mdMenu">
+          <button md-menu-item>
+            <md-icon>fingerprint</md-icon>
+            <span>Login</span>
+          </button>
+          <button md-menu-item disabled>
+              <md-icon>announcement</md-icon>
+              <span>Issues</span>
+          </button>
+          <button md-menu-item>
+              <md-icon>notifications_off</md-icon>
+              <span>Disable alerts</span>
+          </button>
+        </md-menu>
+      </div>
+
+
+<!--
+<md-tab-group>
+  <md-tab label="Gallery">
+    Testing the gallery
+  </md-tab>
+
+  <md-tab label="Settings">
+    <h1>Settings</h1>
+    <p>Here you can control the various settings associated with your app.  There</p>
+    <label>Number of Thumbnails</label>
+    <md-slider 
+      showTicks="true" 
+      max="100" 
+      min="0" 
+      step="1" 
+      thumbLabel="true" 
+      value="18"
+    >
+    </md-slider><br>
+    <md-slide-toggle>Some setting</md-slide-toggle>
+  </md-tab>
+
+  <md-tab label="Auctions">
+      Testing the Auctions
+      <h1>h1 Settings</h1>
+      <h2>h2 Settings</h2>
+      <h3>h3 Settings</h3>
+      <h4>h4 Settings</h4>
+      <h5>h5 Settings</h5>
+      <h6>h6 Settings</h6>
+      <p>Test Paragraph</p>
+      <i>Test Italics</i><br>
+      <b>Test Bold</b>
+  </md-tab>
+</md-tab-group>
+
+-->
+
+

@@ -1,0 +1,92 @@
+<div class="mat-elevation-z8" style="float:left; max-width:65px; text-align:center">
+    <div style="background-color:#88C540; color:white; padding:2px">
+      Open
+    </div>
+    <div  style="padding:10px;">
+        <h1 style="margin:0px;">{{ auctionId }}</h1>
+        <h6  style="margin:0px;">AUCTION</h6>
+    </div>
+</div>
+<div style="float:left; margin-left:50px">
+    <h2>This auction is currently {{ auction?.status }}</h2>
+</div>
+
+<div style="clear:both; margin-top:30px">
+  <br /><br />
+<h3>Main Image Viewer</h3>
+<h3>All Item Image Carousel</h3>
+</div>
+<br>
+
+  <table class="mat-elevation-z8">
+      <tr>
+        <th colspan="2" class=""><h3>Auction Details</h3></th>
+      </tr>
+      <tr>
+        <td valign="top" class="no-wrap">Auction ID</td>
+        <td>{{ auction?.auctionId }}</td>
+      </tr>
+      <tr>
+        <td valign="top" class="no-wrap">Start Date</td>
+        <td>{{ auction?.startDt | date:'M-d-yyyy' }}</td>
+      </tr>
+      <tr>
+        <td valign="top" class="no-wrap">End Date</td>
+        <td>
+          {{ auction?.endDt | date:'M-d-yyyy' }}<br><br> <!-- Flaw in the end date scraper -->
+          <span color='accent' style="color:#FF5722"><b>Please note:</b> The first item closes at 7pm and each item closes one minute latter. The site updates the time of the closing for each item. Also if there is last minute bidding the item is extended.</span>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" class="no-wrap">Pickup Date</td>
+        <td>{{ auction?.pickupDt | date:'M-d-yyyy' }}</td>
+      </tr>
+      <tr>
+        <td valign="top" class="no-wrap">Pickup Location</td>
+        <td>430 East Warrington Avenue, Pittsburgh PA 15210</td>
+      </tr>
+      <tr>
+        <td valign="top" class="no-wrap">Categories</td>
+        <td>
+            <md-chip-list>
+                <md-chip 
+                  selected="true"
+                  style="margin:2px; padding:2px 6px; background-color:#C4C4C4"
+                >
+                  <a href="#">ALL ({{ totalItems }})</a>
+                </md-chip>
+                <md-chip 
+                  *ngFor="let cat of categories" 
+                  selected="true"
+                  style="margin:2px; padding:2px 6px; background-color:#C4C4C4"
+                >
+                  <a href="#">{{ cat.name }} ({{ cat.freq }})</a>
+                </md-chip>
+            </md-chip-list> 
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" class="no-wrap">Notes</td>
+        <td>Questions and Contact Information</td>
+      </tr>
+      <tr>
+        <td valign="top" class="no-wrap">Terms</td>
+        <td>Winning bidders pay by cash or credit card at pick-up date. The auction has a rolling close on the last day of bidding. The first item closes at 7pm and each item closes one minute latter. The site updates the time of the closing for each item. Also if there is last minute bidding the item is extended. There is No Buyer's Premium for any of our auctions.</td>
+      </tr>
+      <tr>
+        <td valign="top" class="no-wrap">Directions</td>
+        <td>
+            <button 
+              md-raised-button 
+              style="font-size:12px;" 
+              color="primary" 
+              (click)="viewMap()"
+            >View Map</button>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" class="no-wrap">Contact</td>
+        <td>Auction Your Possessions Today</td>
+      </tr>
+    </table>
+    

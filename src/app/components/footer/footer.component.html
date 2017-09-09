@@ -1,0 +1,49 @@
+<footer>
+    <div class="container">
+      <div class="row">
+        
+        <!-- <div class="hr"></div> -->
+        <div class="col-md-9 accredidations text-center"> 
+        © 2017
+        <br />
+          <a *ngFor="let acc of accredidations"
+              href="{{ acc.link }}"
+          > 
+            <img 
+              appHighlight 
+              src="assets/{{ acc.svg }}" 
+              alt="assets/{{ acc.svg }}"
+            />
+          </a>
+
+          <br /> 
+          <div class="contacts text-left">
+            <ul>
+              <li *ngFor="let contact of contacts">
+                <a href="{{ contact.link }}">
+                  <div>
+                    <i class="contact-img fa fa-{{ contact.name }}"></i> {{ contact.blurb }}
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+ 
+        <div class="col-md-3 social-media">
+            <ul>
+              <li *ngFor="let media of socialMedia">
+                <a href="{{ media.link }}">
+                  <div class="{{ media.name }} circle">
+                    <i *ngIf="media.name !== 'blogger'" class="fa fa-{{ media.name }}"></i>
+                    <img *ngIf="media.name === 'blogger'" src="assets/blogger.svg" alt="assets/blogger.svg" class="blogger-img" />
+                  </div>
+                  {{ media.blurb }}
+                </a>
+              </li>
+            </ul>
+        </div>
+
+      </div>
+    </div>
+</footer>
